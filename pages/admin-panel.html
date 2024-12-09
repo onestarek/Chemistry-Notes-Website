@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Administratora</title>
+    <link rel="stylesheet" href="/css/admin-panel.css">
+    <link rel="icon" type="image/x-icon" href="/ico/ikonka.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="modal" id="noteModal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2>Dodaj Nową Notatkę</h2>
+            <form id="noteForm" enctype="multipart/form-data">
+                <label for="noteTitle">Tytuł Notatki:</label>
+                <input type="text" id="noteTitle" name="title" required>
+
+                <label for="classSelect">Klasa:</label>
+                <select id="classSelect" name="class" required>
+                    <option value="I">Klasa 1</option>
+                    <option value="II">Klasa 2</option>
+                    <option value="III">Klasa 3</option>
+                    <option value="IV">Klasa 4</option>
+                </select>
+
+                <label for="scopeSelect">Zakres:</label>
+                <select id="scopeSelect" name="scope" required>
+                    <option value="Podstawowy">Podstawowy</option>
+                    <option value="Rozszerzony">Rozszerzony</option>
+                </select>
+
+                <label for="fileInput">Wybierz Plik (.pdf):</label>
+                <input type="file" id="fileInput" name="file" accept=".pdf" required>
+
+                <button type="submit">Zatwierdź</button>
+            </form>
+        </div>
+    </div>
+    <div class="modal" id="deleteModal">
+        <div class="modal-content">
+            <span class="close" id="closeDeleteModal">&times;</span>
+            <h2>Czy na pewno chcesz usunąć plik?</h2>
+            <p id="fileNameToDelete"></p>
+            <button id="confirmDeleteBtn">Usuń</button>
+            <button id="cancelDeleteBtn">Anuluj</button>
+        </div>
+    </div>
+    <div class="admin-panel">
+        <header>
+            <button class="logout-btn" id="logoutBtn">Wyloguj</button>
+        </header>
+        <main>
+            <h1>Panel Administratora</h1>
+            <button class="add-note-btn" id="addNoteBtn">Dodaj Notatkę</button>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tytuł</th>
+                        <th>Klasa</th>
+                        <th>Zakres</th>
+                        <th>Data Dodania</th>
+                        <th>Akcje</th>
+                    </tr>
+                </thead>
+                <tbody id="noteTable">
+                </tbody>
+            </table>
+        </main>
+        <footer>
+            <span class="author">Zalogowano jako:</span>
+        </footer>
+    </div>
+    <script src="/js/admin-panel.js"></script>
+</body>
+</html>

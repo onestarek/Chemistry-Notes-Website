@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemia</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="/ico/ikonka.ico">
+</head>
+<body>
+    <div class="login-modal" id="login-modal" style="display: none;">
+        <div class="login-box">
+            <span class="close-btn" id="close-btn">&times;</span>
+            <h2>Zaloguj się</h2>
+            <form id="login-form">
+                <div id="error-message" class="error-box" style="display: none;">
+                    Niepoprawny login lub hasło!
+                </div>
+                <label for="username">Nazwa użytkownika:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Hasło:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Zaloguj</button>
+            </form>
+        </div>
+    </div>
+    
+    <button class="login-btn">Zaloguj Się</button>
+    <div class="container">
+        <div class="content-wrapper">
+            <div class="section">
+                <h2>Zakres Podstawowy</h2>
+                <ul>
+                    <li><a href="/podstawa/klasaI.html">Klasa I</a></li>
+                    <li><a href="/podstawa/klasaII.html">Klasa II</a></li>
+                    <li><a href="/podstawa/klasaIII.html">Klasa III</a></li>
+                </ul>
+            </div>
+        
+            <div class="section">
+                <h2>Zakres Rozszerzony</h2>
+                <ul>
+                    <li><a href="/rozszerzenie/klasaI.html">Klasa I</a></li>
+                    <li><a href="/rozszerzenie/klasaII.html">Klasa II</a></li>
+                    <li><a href="/rozszerzenie/klasaIII.html">Klasa III</a></li>
+                    <li><a href="/rozszerzenie/klasaIV.html">Klasa IV</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="/js/main.js"></script>
+</body>
+</html>
